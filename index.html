@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Eshop — техника и гаджеты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">📱 Eshop</div>
+            <div class="header-right">
+                <a href="https://vk.com/eshop_support" class="support-link" target="_blank">Поддержка VK</a>
+                <div id="cartIcon" class="cart-icon">🛒 <span id="cartCount">0</span></div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-container">
+        <aside class="sidebar">
+            <h3>Модели</h3>
+            <div class="model-list">
+                <div class="model-item" data-model="all">Все</div>
+                <div class="model-item" data-model="iPhone 11">iPhone 11</div>
+                <div class="model-item" data-model="iPhone 12">iPhone 12</div>
+                <div class="model-item" data-model="iPhone 13">iPhone 13</div>
+                <div class="model-item" data-model="iPhone 14">iPhone 14</div>
+                <div class="model-item" data-model="iPhone 15">iPhone 15</div>
+                <div class="model-item" data-model="iPhone 16">iPhone 16</div>
+                <div class="model-item" data-model="iPhone 17">iPhone 17</div>
+                <div class="model-item" data-model="Apple Watch">Apple Watch</div>
+                <div class="model-item" data-model="Samsung">Samsung</div>
+                <div class="model-item" data-model="Google Pixel">Google Pixel</div>
+            </div>
+        </aside>
+
+
+        <div class="content">
+            <div class="products" id="productsContainer"></div>
+        </div>
+    </main>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Оформление заказа</h2>
+            <form id="orderForm">
+                <input type="text" id="userName" placeholder="Ваше имя" required>
+                <input type="tel" id="userPhone" placeholder="Телефон" required>
+                <input type="email" id="userEmail" placeholder="Email для чека (необязательно)">
+                <textarea id="userAddress" placeholder="Адрес доставки (город, улица, дом, квартира)" required></textarea>
+                <div id="orderSummary"></div>
+                <button type="submit" class="btn btn-primary">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-payment">&times;</span>
+            <h2>Заказ принят!</h2>
+            <p>Спасибо. Продавец свяжется с вами для подтверждения.</p>
+            <button id="closePaymentBtn" class="btn btn-primary">Закрыть</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Eshop. Товары в наличии. Доставка по всей России.</p>
+            <p>По вопросам оптовых закупок: <a href="https://vk.com/eshop_support">VK</a></p>
+        </div>
+    </footer>
+
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
