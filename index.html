@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Eshop – скупка и продажа техники</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<div class="logo">📱 Eshop</div>
+
+<div class="header-right">
+
+<div id="cartIcon" class="cart-icon">🛒 <span id="cartCount">0</span></div>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="catalog">
+
+<div class="container">
+
+<h2>Наши телефоны</h2>
+
+<div class="products" id="productsContainer"></div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- Модальное окно корзины -->
+
+<div id="cartModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h3>Корзина</h3>
+
+<div id="cartItems"></div>
+
+<div id="cartTotal"></div>
+
+<button id="checkoutBtn" class="btn">Оформить заказ</button>
+
+</div>
+
+</div>
+
+<!-- Модальное окно оформления -->
+
+<div id="orderModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-order">&times;</span>
+
+<h3>Оформление заказа</h3>
+
+<form id="orderForm">
+
+<input type="text" id="userName" placeholder="Ваше имя" required>
+
+<input type="tel" id="userPhone" placeholder="Телефон" required>
+
+<textarea id="userAddress" placeholder="Адрес доставки (город, улица, дом)" required></textarea>
+
+<p class="info">Предоплата 100%. Доставка 2–7 дней. При отсутствии товара — предложим аналог.</p>
+
+<button type="submit" class="btn">Отправить заказ</button>
+
+</form>
+
+<div id="formMessage"></div>
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="container">
+
+<p>© 2026 Eshop. Скупка и продажа техники. 100% предоплата.</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
